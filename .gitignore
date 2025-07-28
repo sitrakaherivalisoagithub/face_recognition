@@ -1,0 +1,5 @@
+static/
+notebook/.ipynb_checkpoints/
+.insightface/
+venv/
+employees.json

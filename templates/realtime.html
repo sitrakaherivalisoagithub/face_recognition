@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pointage en temps réel</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #444;
+        }
+        #video-container {
+            position: relative;
+            width: 640px;
+            height: 480px;
+            border: 2px solid #5c67f2;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        #video {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        #results {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #5c67f2;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #4a54e1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pointage en temps réel</h1>
+    <div id="video-container">
+        <img id="video" src="{{ url_for('video_feed') }}" alt="Video Stream">
+    </div>
+    <div id="results">En attente de reconnaissance...</div>
+    <a href="/">Retour à l'accueil</a>
+
+    <script>
+        // Optionnel: Ajouter du JavaScript pour mettre à jour les résultats
+        // ou gérer les interactions si nécessaire.
+    </script>
+</body>
+</html>
